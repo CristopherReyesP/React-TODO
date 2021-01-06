@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import { CallbackHook } from './components/06-memos/CallbackHook';
+// import { Padre } from './components/07-tarea-memo/Padre';
+import { TodoApp } from './components/08-useReducer/TodoApp';
+// import { MemoHook } from './components/06-memos/MemoHook';
+// import { FormWhitCustomHook } from './components/02-useEffect/FormWhitCustomHook';
+// import { MultipleCustomHooks } from './components/03-examples/MultipleCustomHooks';
+// import { RealExampleRef } from './components/04-useRef/RealExampleRef';
+// import { Layouts } from './components/05-useLayoutEffect/Layout';
+// import { Memorize } from './components/06-memos/Memorize';
+// import { CounterApp } from './components/01-useState/CounterApp';
+// import { CounterWhitCustomHook } from './components/01-useState/CounterWhitCustomHook';
+// import { Simpleform } from './components/02-useEffect/Simpleform';
+// import { HookApp } from './HookApp';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+
+    <TodoApp />,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// import './components/08-useReducer/intro-reducer';
