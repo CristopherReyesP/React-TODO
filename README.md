@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# React-TODO (hook-app)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Collection of small React exercises, one per hook (`useState`, `useEffect`, `useRef`, `useLayoutEffect`, `useMemo`/`useCallback`, `useReducer`), plus custom hooks. The entry point currently renders a to-do list built with `useReducer`.
 
-## Available Scripts
+> Learning project built in December 2020 - January 2021 while practicing Create React App and the React hooks introduced in React 16.8. Kept public as part of my learning history.
 
-In the project directory, you can run:
+## What it does
 
-### `yarn start`
+`src/components/` is organized in numbered folders that each isolate one hook: `01-useState` (counters), `02-useEffect` (forms, custom hooks), `03-examples` (combining custom hooks), `04-useRef`, `05-useLayoutEffect`, `06-memos` (`useMemo`/`useCallback`), `07-tarea-memo` (parent/child memoization), and `08-useReducer` (the to-do app). `src/index.js` mounts whichever component is currently uncommented — right now that's `TodoApp` from `08-useReducer`, which adds/toggles/deletes todos via a reducer and persists the list to `localStorage`. `src/hooks/` holds reusable custom hooks (`useCounter`, `useFetch`, `useForm`).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tech Stack
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- React 17 / React DOM 17
+- Create React App (`react-scripts` 4.0.1)
+- Testing Library (Jest DOM, React, user-event) — scaffolded, no custom tests added
 
-### `yarn test`
+## Running Locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+yarn install
+yarn start        # http://localhost:3000
+```
 
-### `yarn build`
+- `yarn build` — production build into `build/`
+- `yarn test` — runs the CRA test runner
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To view a different exercise, edit `src/index.js` and swap which component is imported/rendered.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## What I practiced
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Core React hooks: `useState`, `useEffect`, `useRef`, `useLayoutEffect`, `useMemo`, `useCallback`, `useReducer`
+- Writing and composing custom hooks (`useCounter`, `useFetch`, `useForm`)
+- State persistence to `localStorage`
+- Component memoization for render performance (`React.memo`, `useMemo`)
